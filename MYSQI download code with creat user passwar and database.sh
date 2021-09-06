@@ -22,8 +22,6 @@ DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
 # flush reloads grant table
 FLUSH PRIVILEGE;
 CREATE USER 'test' identified by 'newpassword';
-CREATE USER ‘itexps’ identified by ‘ITexps@123’;
-GRANT SELECT on *.* to itexps;
 create user 'itexps' identified by 'ITexps@123';
 grant select on *.* to itexps;
 FLUSH PRIVILEGES;  
