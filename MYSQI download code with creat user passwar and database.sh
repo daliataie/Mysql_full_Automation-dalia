@@ -21,7 +21,6 @@ DELETE FROM mysql.user WHERE User='';
 DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
 # flush reloads grant table
 FLUSH PRIVILEGE;
-# these lines need to be corrected.   they will error out
 CREATE USER 'test' identified by 'newpassword';
 CREATE USER ‘itexps’ identified by ‘ITexps@123’;
 GRANT SELECT on *.* to itexps;
