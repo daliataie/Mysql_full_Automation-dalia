@@ -19,8 +19,7 @@ DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.
 DELETE FROM mysql.user WHERE User='';
 # Deleting test database
 DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
-# flush reloads grant table
-FLUSH PRIVILEGE;
+# flush reloads grant table FLUSH PRIVILEGE;
 CREATE USER 'test' identified by 'newpassword';
 create user 'itexps' identified by 'ITexps@123';
 grant select on *.* to itexps;
