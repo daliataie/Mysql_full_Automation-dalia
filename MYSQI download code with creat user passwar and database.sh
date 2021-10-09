@@ -14,13 +14,13 @@ mysql -u root
 # Sets password for the root account
 UPDATE mysql.user SET Password=PASSWORD('$rootpass') WHERE User='root';
 # Deleting root user for local host
-DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', '127.0.0.1', '::1');
+DELETE FROM mysql.user WHERE User='root' AND Host NOT IN ('localhost', 'x.0.0.x', '::1');
 # Deleting annonymous user
 DELETE FROM mysql.user WHERE User='';
 # Deleting test database
 DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
 CREATE USER 'test' identified by 'newpassword';
-create user 'itexps' identified by 'ITexps@123';
+create user 'itexps' identified by 'company123';
 # Grant priviliges to user "itexps"
 grant select on *.* to itexps;
 FLUSH PRIVILEGES;
