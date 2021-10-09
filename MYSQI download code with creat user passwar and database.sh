@@ -26,7 +26,7 @@ grant select on *.* to bbb;
 FLUSH PRIVILEGES;
 # Review users
 SELECT USER,host from mysql.user;
-CREATE DATABASE itexpertdatabase;
+CREATE DATABASE companudatabase;
 SHOW DATABASES;
 exit
 
