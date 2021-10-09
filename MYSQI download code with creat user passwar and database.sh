@@ -20,9 +20,9 @@ DELETE FROM mysql.user WHERE User='';
 # Deleting test database
 DELETE FROM mysql.db WHERE Db='test' OR Db='test_%';
 CREATE USER 'test' identified by 'newpassword';
-create user 'itexps' identified by 'company123';
-# Grant priviliges to user "itexps"
-grant select on *.* to itexps;
+create user 'bbb' identified by 'company123';
+# Grant priviliges to user "bbb"
+grant select on *.* to bbb;
 FLUSH PRIVILEGES;
 # Review users
 SELECT USER,host from mysql.user;
